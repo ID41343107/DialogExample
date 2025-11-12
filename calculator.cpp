@@ -62,16 +62,9 @@ Calculator::Calculator(QWidget *parent)
     QPushButton* clearButton = createButton("C", SLOT(clearClicked()));
     gridLayout->addWidget(clearButton, 0, 0, 1, 2);
 
-    // Advanced buttons - Derivative and Integral
-    QPushButton* derivativeButton = createButton("d/dx", SLOT(derivativeClicked()));
-    gridLayout->addWidget(derivativeButton, 0, 2);
-
-    QPushButton* integralButton = createButton("∫", SLOT(integralClicked()));
-    gridLayout->addWidget(integralButton, 5, 0, 1, 2);
-
     // Exit button
     QPushButton* exitButton = createButton("Exit", SLOT(accept()));
-    gridLayout->addWidget(exitButton, 5, 2);
+    gridLayout->addWidget(exitButton, 0, 2);
 
     setWindowTitle("Calculator");
     setMinimumSize(300, 400);
@@ -174,25 +167,5 @@ void Calculator::clearClicked()
     currentValue = 0.0;
     storedValue = 0.0;
     currentOperator.clear();
-    waitingForOperand = true;
-}
-
-void Calculator::derivativeClicked()
-{
-    // For demonstration: derivative of x^2 at current value
-    // d/dx(x^2) = 2x
-    double x = display->text().toDouble();
-    double result = 2.0 * x;
-    display->setText(QString::number(result));
-    waitingForOperand = true;
-}
-
-void Calculator::integralClicked()
-{
-    // For demonstration: integral of x^2 from 0 to current value
-    // ∫x^2 dx from 0 to x = x^3/3
-    double x = display->text().toDouble();
-    double result = (x * x * x) / 3.0;
-    display->setText(QString::number(result));
     waitingForOperand = true;
 }
