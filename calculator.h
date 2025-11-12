@@ -20,8 +20,6 @@ private slots:
     void equalClicked();
     void clearClicked();
     void decimalClicked();
-    void derivativeClicked();
-    void integralClicked();
 
 private:
     QLineEdit* display;

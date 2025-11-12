@@ -13,8 +13,6 @@ A Qt-based calculator application without using .ui files.
 ### Additional Features
 - Decimal point support for floating-point calculations
 - Clear button (C) to reset the calculator
-- Derivative button (d/dx) - demonstrates derivative of x² at current value
-- Integration button (∫) - demonstrates integral of x² from 0 to current value
 
 ### UI Components
 - Number buttons: 0-9
