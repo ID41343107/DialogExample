@@ -57,14 +57,14 @@ Calculator::Calculator(QWidget *parent)
 
     // Special buttons
     QPushButton* equalButton = createButton("=", SLOT(equalClicked()));
-    gridLayout->addWidget(equalButton, 5, 3);
+    gridLayout->addWidget(equalButton, 5, 0, 1, 3);
 
     QPushButton* clearButton = createButton("C", SLOT(clearClicked()));
     gridLayout->addWidget(clearButton, 0, 0, 1, 2);
 
     // Exit button
     QPushButton* exitButton = createButton("Exit", SLOT(accept()));
-    gridLayout->addWidget(exitButton, 0, 2);
+    gridLayout->addWidget(exitButton, 0, 2, 1, 2);
 
     setWindowTitle("Calculator");
     setMinimumSize(300, 400);
