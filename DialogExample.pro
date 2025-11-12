@@ -10,13 +10,10 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    byterconverter.cpp
+    calculator.cpp
 
 HEADERS += \
-    byterconverter.h
-
-FORMS += \
-    byterconverter.ui
+    calculator.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
